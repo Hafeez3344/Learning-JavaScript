@@ -1,4 +1,4 @@
-let a = 20;
-let b = 30;
-let c = a + b;
-console.log("a + b = " + c);
+let name = "hafeez";
+let age = 25;
+
+console.log(name,age)

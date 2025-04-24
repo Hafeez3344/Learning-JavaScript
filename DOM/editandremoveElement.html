@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Learning</title>
+
+    <style>
+        .bg-black {
+            background-color: #212121;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body class="bg-black">
+    <ul class= "language">
+        <li>Javascript</li>
+    </ul>
+</body>
+
+<script>
+    function addLanguage(langName) {
+        const li = document.createElement('li');
+        li.innerHTML = `${langName}`
+        document.querySelector('.language').appendChild(li);
+    }
+    addLanguage("React")
+    addLanguage("Python")
+    addLanguage("Node")
+
+
+
+// Best way 
+    function addOptiLanguage(langName) {
+    let li = document.createElement('li'); // create new <li>
+    li.appendChild(document.createTextNode(langName)); // append text node inside <li>
+    document.querySelector('.language').appendChild(li); // append <li> to <ul>
+}
+
+addOptiLanguage("C++"); // call function to add "C++"
+
+</script>
+</html>
